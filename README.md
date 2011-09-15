@@ -5,14 +5,14 @@ This is a mobile application for the available public transit systems in Boone, 
 
 The project is BSD licensed (see LICENSE.txt), and owes much thanks to the following open source projects upon which it is built:
 
- * (PhoneGap)[http://www.phonegap.com/]
- * (jQuery Mobile)[http://jquerymobile.com/]
- * (jQuery UI)[http://jqueryui.com/]
- * (Modest Maps)[http://modestmaps.com/]
- * (Wax)[https://github.com/mapbox/wax]
- * (Simple Inheritance)[http://ejohn.org/]
- * (jQuery SimpleWeather)[http://plugins.jquery.com/project/simpleWeather]
- * (Tweet!)[http://tweet.seaofclouds.com/]
+ * [PhoneGap](http://www.phonegap.com/)
+ * [jQuery Mobile](http://jquerymobile.com/)
+ * [jQuery UI)(http://jqueryui.com/)
+ * [Modest Maps)(http://modestmaps.com/)
+ * [Wax](https://github.com/mapbox/wax)
+ * [Simple Inheritance](http://ejohn.org/)
+ * [jQuery SimpleWeather](http://plugins.jquery.com/project/simpleWeather)
+ * [Tweet!](http://tweet.seaofclouds.com/)
 
 Who
 ===

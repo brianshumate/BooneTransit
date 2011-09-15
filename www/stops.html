@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- Change this if you want to allow scaling -->
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <title>Boone Transit :: Stops</title>
+            <!-- iPad/iPhone specific css below, add after your main css >
+             <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+             <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+             -->
+            <!-- If you application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+            <link rel="stylesheet" href="lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+            <link rel="stylesheet" href="css/boonetransit.css" />
+
+            <script type="text/javascript" src="phonegap.0.9.5.1.min.js"></script>
+            <script type="text/javascript" src="lib/jquery-1.5.2.min.js"></script>
+            <script type="text/javascript" src="js/boonetransit.js"></script>
+
+            <script type="text/javascript" src="lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
+            <script src="http://www.google.com/jsapi?key=ABQIAAAAKSI20XRyRq0c8FdN7SQfDhTY8AO8-Rp8ppBNu5EoRcWDvewUkBQr79Vb_1GNwIcp4oF83sYHRmr7vA" type="text/javascript"></script>
+            <script type="text/javascript">
+                google.load("maps", "3", {'other_params':'sensor=true'});
+                // google.load("jquery", "1.5");
+                </script>
+
+            <script type="text/javascript" src="lib/ui/jquery.ui.map.js"></script>
+
+            <script type="text/javascript" src="lib/simple-inheritance.min.js"></script>
+            <script type="text/javascript" src="lib/jquery.animate-enhanced.min.js"></script>
+
+            <script type="text/javascript" src="lib/jquery.jtweetsanywhere-1.2.1.js"></script>
+
+            </head>
+    <body onload="onBodyLoad();">
+
+        <div data-role="page" id="stops" data-theme="d">
+
+            <div data-role="header" data-theme="d">
+                <h1>BooneTransit</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <ul class="ui-listview" data-filter="true" data-role="listview" data-theme="c" data-divider-theme="a">
+                    <li class="ui-li-divider" data-role="list-divider">A</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">App. South Apts / PSI Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">App. St. / King St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Appalachian Brian Estates</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">BooneTransit Complex (on request)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Access Road at Stop sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Annex/Parks and Rec/State Farm Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU App. Heights / Bodenheimer Up</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Broyhill Inn Entrance(up)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Broyhill Inn Entrance(down)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Broyhill Inn South Lot (departs)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Chem.,Astr.,Physics (C.A.P) Building Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Child Care Center</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU College Street Station(Departs)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Convocation Center on US321</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Eggers Hall Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Greenwood Lot Shelter(down)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Hoey Hall Awning</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Industrial Education Tech Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Justice Hall Opposite Trivette Shelter/Quinn Center</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Living Learning Center down</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Main Entrance/Rivers St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Mountaineer Apts. (opposite shelter)(Down)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Mountaineer Apts. Shelter (up)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Panhellenic Hall</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Raley Hall at traffic circle(departs)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Raley Hall traffic light on Rivers St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Recreation Center Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU State Farm Lot Shelter /Boone Greenway(departs)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Skywalk Brick Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Thomas Building/Convocation Center</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Trivette Dining Hall shelter/Quinn Cntr</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU University Hall</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Walker Hall (at crosswalk)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Walker Hall (down) at shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">ASU Walker Hall Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Applebees</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">B</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Bamboo Rd./US 421 (Exxon station)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">BB&amp;T Bank on NC 105</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">BB&amp;T Bank on NC 105 EXTENSION</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">BB&amp;T/ASU Panhellenic Hall on US 321</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Bagelry</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Drug on King St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Hgts. Shopping Cntr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Hgts./State Farm Road</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Mall (Wilson Drive entrance)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Mall US 321 side</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Town Hall, Blowing Rock Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Boone Town Hall on King St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Bradford Park Trailer Court</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Brookshire Road Park</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">BrookHollow Lane/Bluebird Lane</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Brown Brothers Apartments Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Builders Plaza</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Burger King on Blowing Rock Rd.</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">C</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Casa Rustica</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">CCC&amp;TI Dr. entrance off White Oak. Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">CCC&amp;TI Dr. at NC105bypass</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">China Buffet</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">College Place Apts. Shelter</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">D</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Depot St./Queen St. (opposite new county library)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Depot St./King St. at Traffic Light</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">E</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">East Village Shelter on Perkinsville Dr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Edgecliff Lane Shelter</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">F</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Faculty St./NC 105 Stop Sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Faculty St. opposite App. South/PSI Shelter</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">G</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Greenway Business Park</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Greenway Rd. parking lot near traffic light</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Greenway Rd/Ivy Dr</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">H</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Hardin St./ASU Convocation Center Crosswalk</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Hardin St./Dauph Blan St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Heritage Court</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">High Country Condos Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Highland Avenue</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Highland Ave./Faculty St. at Stop Sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Hodges Gap Rd./NC105 Bypass</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Holmes Conv. Ctr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Horn Avenue across the street from Condos</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Horn in the West Parking Lot</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Howard St./Appalachian St.(Corner Raley Hall)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Howard St./Depot St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Howard St./Hardin St./Daniel Boone Inn</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Human Services Center(on request)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Human Services Center(on request)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Hunger Coalition</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">I</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Industrial Park Rd. (on request)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Ivy Terrace /University Hall on State Farm Rd</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">J</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">J.C. Park on Horn in the West Drive</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">K</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Kangaroo Express</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Kensington Meadows Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street / Appalachian Street</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street Daniel Boone Inn</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street/Depot Street at traffic light</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street/Hardees</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street/New Market Centre Blvd. at Cleaners</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King Street Pharmacy/Earth Fare</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">King St/Water St Opposite Watauga County Courthouse</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Kingswood Apts.</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">L</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Long St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Loven Ready Mix</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">M</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">McDonalds/Wachovia Bank on US321</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Meadow Hill Estates Entrance</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Meadowview Drive at Walgreens</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Meadowview Drive/Greenway Road</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Miller Industries</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Mountaineer Village Apartments</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">N</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">NC Highway 105 Extension</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">NC 105 Extension/Azalea Dr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">NC105 Bypass/ CCC&amp;TI Student Support Ctr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">NC 105/Poplar Hill Dr.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">NC 194 at New Mkt. Cntr. Entrance</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">New Market Blvd.(at traffic light)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">New Market Blvd. / State Employees Credit Union</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">New Market Blvd. / NC 194 Stop Sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">New Market Blvd. Shelter</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">O</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Oak Grove Road/US 421at stop sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old Bristol Rd. / Gilbert Barnes Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old Bristol Rd./US 421 Opposite Oak Grove Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old Bristol Rd. opposite CCC &amp; TI Student Support Center</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old US 421/Delmar St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old 421 at New 421 stop sign</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Old Waterloo</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">P</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Papa Johns Pizza</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Phoenix Apts</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Pinnacle Dr. / Old Bristol Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Poplar Grove Road</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Poplar Grove Road Connector</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">Q</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Queen St./Water St.</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">R</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Rams Rack Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Red Onion Café Crosswalk</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Rivers St./Depot St.</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">S</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Shadowline Dr./App. Brian Estates entrance</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Shadowline Dr. Opposite office park</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">610 State Farm Road</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">State Farm Road opposite Furman Drive</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">U</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">University Highlands Apartments</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">US 321/ Horn in the West Drive</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">US 421/Oak Grove Road opposite Waterloo</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">US 421/ George Wilson Rd./ Veterinary Hospital</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">V</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Veterinary Clinic on Wilson Rd.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Village at Meadowview Apartments</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Visitors Center/High Country Host on US 321</a></li>
+                    <li class="ui-li-divider" data-role="list-divider">W</li>
+                    <li class="ui-btn" data-theme="c"><a href="#">WalMart Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">WalMart (opposite shelter)</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga Building Supply</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga Campus CCC&amp;TI at sidewalk</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga County Courthouse</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga High School Crosswalk on NC105</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga High School on old 421</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga County Human Services CTR on Poplar Grove Rd</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga County Law Enforcement Center on request</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga Medical Center Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Watauga Opportunities/IRC Shelter</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Water St./King St.</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Westhaven Apts., NC105 bypass</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">White Oak Road</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Wilco Fuel Plaza/Highland Hills Motel</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Winkler's Meadow</a></li>
+                    <li class="ui-btn" data-theme="c"><a href="#">Winkler's Meadow (across street)</a></li>
+                </ul>
+
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>AppalCART Stops</h4>
+            </div><!-- /header -->
+        </div><!-- /page -->
+
+
+            <script src="js/boonetransit.js" type="application/x-javascript" charset="utf-8"></script>
+    </body>
+</html>

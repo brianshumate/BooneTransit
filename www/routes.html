@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- Change this if you want to allow scaling -->
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <title>BooneTransit</title>
+            <!-- iPad/iPhone specific css below, add after your main css >
+             <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+             <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+             -->
+            <!-- If you application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+            <link rel="stylesheet" href="lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+            <link rel="stylesheet" href="css/boonetransit.css" />
+
+            <script type="text/javascript" src="phonegap.0.9.5.1.min.js"></script>
+            <script type="text/javascript" src="lib/jquery-1.5.2.min.js"></script>
+            <script type="text/javascript" src="js/boonetransit.js"></script>
+
+            <script type="text/javascript" src="lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
+            <script src="http://www.google.com/jsapi?key=ABQIAAAAKSI20XRyRq0c8FdN7SQfDhTY8AO8-Rp8ppBNu5EoRcWDvewUkBQr79Vb_1GNwIcp4oF83sYHRmr7vA" type="text/javascript"></script>
+            <script type="text/javascript">
+                google.load("routes", "3", {'other_params':'sensor=true'});
+                // google.load("jquery", "1.5");
+                </script>
+
+            <script type="text/javascript" src="lib/ui/jquery.ui.map.js"></script>
+
+            <script type="text/javascript" src="lib/simple-inheritance.min.js"></script>
+            <script type="text/javascript" src="lib/jquery.animate-enhanced.min.js"></script>
+
+            <script type="text/javascript" src="lib/jquery.jtweetsanywhere-1.2.1.js"></script>
+
+            </head>
+    <body onload="onBodyLoad();">
+
+        <!-- Start of first page -->
+        <div data-role="page" id="routes" data-theme="d">
+
+            <div data-role="header" data-theme="d">
+                <h1>BooneTransit</h1>
+            </div><!-- /header -->
+
+            <div data-role="content" data-theme="d">
+
+                <ul class="ui-listview" data-role="listview" data-theme="d">
+                    <li class="ui-btn  ui-li ui-btn-up-a"><a class="ui-link-inherit" href="orange_route.html">Orange Route</a></li>
+                </ul>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>AppalCART Routes</h4>
+            </div><!-- /header -->
+        </div><!-- /page -->
+
+    </body>
+</html>

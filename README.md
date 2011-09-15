@@ -18,8 +18,10 @@ The project is BSD licensed (see LICENSE.txt), and owes much thanks to the follo
 Who
 ===
 
- * @brianshumate
- * @notzach
+ * [brianshumate](https://github.com/brianshumate)
+  * Twitter: [@brianshumate](http://twitter.com/#!/brianshumate)
+ * [zachseifts](https://github.com/zachseifts)
+  * Twitter: [@notzach](http://twitter.com/#!/notzach)
 
 Status
 ======

@@ -10,7 +10,7 @@ The project is BSD licensed (see LICENSE.txt), and owes much thanks to the follo
  * [jQuery UI](http://jqueryui.com/)
  * [Modest Maps](http://modestmaps.com/)
  * [Wax](https://github.com/mapbox/wax)
- * [reqest](https://github.com/ded/Reqwest)
+ * [reqwest](https://github.com/ded/Reqwest)
  * [Simple Inheritance](http://ejohn.org/)
  * [jQuery SimpleWeather](http://plugins.jquery.com/project/simpleWeather)
  * [Tweet!](http://tweet.seaofclouds.com/)

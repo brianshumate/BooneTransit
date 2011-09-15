@@ -38,29 +38,31 @@
 
 
             <div data-role="content" data-theme="c">
-                <img class="alignright pushdown20" src="img/orangeroutebus@2x.png" height=72 width=72 alt="">
+                <!-- gets in the way -jbs <img class="alignright pushdown20" src="img/orangeroutebus@2x.png" height=72 width=72 alt=""> -->
                 <h4>MAP TEST</h4>
                 <div id="maptest" style="height:265px;width:100%;background-color:#eee;margin:20px 0;">
                 </div>
             </div><!-- /content -->
                 <script type="text/javascript">
                 (function() {
-                        var tilejson = {
-                          tilejson: '1.0.0',
-                          scheme: 'tms',
-                          tiles: ['http://tiles.brianshumate.com/1.0.0/boone_longboarding/{z}/{x}/{y}.png'],
-                          formatter: function(options, data) { return data.NAME }
-                        };
-                        var mm = com.modestmaps;
-                        var m = new mm.Map('maptest',
-                          new wax.mm.connector(tilejson),
-                          new mm.Point(300,240),
-                          [new mm.MouseHandler(), new mm.TouchHandler()]);
-                        wax.mm.interaction(m, tilejson);
-                        wax.mm.mobile(m, tilejson, {
-                          bodyDraw: function(body) { body.bgColor = '#000000' }
+                        var url = 'http://tiles.brianshumate.com/api/Tileset/boone_longboarding';
+                        wax.tilejson(url,
+                        function(tilejson) {
+                            var mm = com.modestmaps;
+                            var m = new mm.Map('maptest',
+                            new wax.mm.connector(tilejson),
+                            new mm.Point(290, 300));
+                            wax.mm.legend(m, tilejson).appendTo(m.parent);
+                            wax.mm.zoomer(m, tilejson).appendTo(m.parent);
+                            wax.mm.interaction(m);
+                            m.setCenterZoom(new mm.Location(
+                            tilejson.center[1],
+                            // lon
+                            tilejson.center[0]),
+                            // lat
+                            tilejson.center[2]);
+                            // zoom
                         });
-                        m.setCenterZoom(new mm.Location(36.216,-81.674), 14);
                 })();
                 </script>
             <div data-role="footer">

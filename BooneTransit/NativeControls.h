@@ -15,19 +15,19 @@
 #import <UIKit/UITabBar.h>
 #import <UIKit/UIToolbar.h>
 #ifdef PHONEGAP_FRAMEWORK
-#import <PhoneGap/PhoneGapCommand.h>
+#import <PhoneGap/PGPlugin.h>
 #else
-#import "PhoneGapCommand.h"
+#import "PGPlugin.h"
 #endif
 
-@interface NativeControls : PhoneGapCommand <UITabBarDelegate, UIActionSheetDelegate> {
+@interface NativeControls : PGPlugin <UITabBarDelegate, UIActionSheetDelegate> {
 	UITabBar* tabBar;
 	NSMutableDictionary* tabBarItems;
-
+    
 	UIToolbar* toolBar;
 	UIBarButtonItem* toolBarTitle;
 	NSMutableArray* toolBarItems;
-
+    
 	CGRect	originalWebViewBounds;
 }
 
@@ -40,6 +40,8 @@
 - (void)createTabBarItem:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)updateTabBarItem:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)selectTabBarItem:(NSArray*)arguments withDict:(NSDictionary*)options;
+
+
 
 /* Tool Bar methods
  */

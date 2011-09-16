@@ -3,7 +3,7 @@ BooneTransit
 
 This is a mobile application for the available public transit systems in Boone, North Carolina. It will initially provide schedules, routes, and rider information for Watauga County's free AppalCART bus system.
 
-The project is BSD licensed (see LICENSE.txt), and owes much thanks to the following open source projects upon which it is built:
+The project is BSD licensed [see LICENSE.md](https://github.com/brianshumate/BooneTransit/blob/master/LICENSE.md), and owes much thanks to the following open source projects upon which it is built:
 
  * [PhoneGap](http://www.phonegap.com/)
  * [jQuery Mobile](http://jquerymobile.com/)

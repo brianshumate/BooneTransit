@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711EF9041423EF2200E06E7E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 711EF9031423EF2200E06E7E /* icon.png */; };
+		711EF9071423EF2B00E06E7E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 711EF9061423EF2B00E06E7E /* icon@2x.png */; };
+		711EF9091423EF3200E06E7E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 711EF9081423EF3200E06E7E /* Default.png */; };
+		711EF90B1423EF3D00E06E7E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 711EF90A1423EF3D00E06E7E /* Default@2x.png */; };
 		713B5FF41423E40D00448C1E /* NativeControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 713B5FF31423E40D00448C1E /* NativeControls.m */; };
 		713B5FF81423E41700448C1E /* EmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 713B5FF71423E41700448C1E /* EmailComposer.m */; };
 		717BAC4F1423C69500470407 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 717BAC4E1423C69500470407 /* www */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711EF9031423EF2200E06E7E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		711EF9061423EF2B00E06E7E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		711EF9081423EF3200E06E7E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		711EF90A1423EF3D00E06E7E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		713B5FF21423E40D00448C1E /* NativeControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeControls.h; sourceTree = "<group>"; };
 		713B5FF31423E40D00448C1E /* NativeControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeControls.m; sourceTree = "<group>"; };
 		713B5FF61423E41700448C1E /* EmailComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailComposer.h; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 		71A2BD7814238D0D002A1BA4 = {
 			isa = PBXGroup;
 			children = (
+				711EF90A1423EF3D00E06E7E /* Default@2x.png */,
+				711EF9081423EF3200E06E7E /* Default.png */,
+				711EF9061423EF2B00E06E7E /* icon@2x.png */,
+				711EF9031423EF2200E06E7E /* icon.png */,
 				717BAC4E1423C69500470407 /* www */,
 				71A2BF0914239347002A1BA4 /* CoreMedia.framework */,
 				71A2BDA414238D0D002A1BA4 /* BooneTransit */,
@@ -310,6 +322,10 @@
 				71A2BDC514238D0D002A1BA4 /* Capture.bundle in Resources */,
 				71A2BDC714238D0D002A1BA4 /* PhoneGap.plist in Resources */,
 				717BAC4F1423C69500470407 /* www in Resources */,
+				711EF9041423EF2200E06E7E /* icon.png in Resources */,
+				711EF9071423EF2B00E06E7E /* icon@2x.png in Resources */,
+				711EF9091423EF3200E06E7E /* Default.png in Resources */,
+				711EF90B1423EF3D00E06E7E /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

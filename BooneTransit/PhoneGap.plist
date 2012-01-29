@@ -2,30 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AutoHideSplashScreen</key>
-	<true/>
-	<key>DetectPhoneNumber</key>
-	<true/>
-	<key>EnableAcceleration</key>
-	<true/>
+	<key>TopActivityIndicator</key>
+	<string>gray</string>
 	<key>EnableLocation</key>
 	<false/>
 	<key>EnableViewportScale</key>
 	<false/>
+	<key>AutoHideSplashScreen</key>
+	<true/>
+	<key>ShowSplashScreenSpinner</key>
+	<true/>
+	<key>MediaPlaybackRequiresUserAction</key>
+	<false/>
+	<key>AllowInlineMediaPlayback</key>
+	<false/>
+	<key>OpenAllWhitelistURLsInWebView</key>
+	<false/>
 	<key>ExternalHosts</key>
-	<array>
-		<string>tiles.brianshumate.com</string>
-	</array>
+	<array/>
 	<key>Plugins</key>
 	<dict>
-		<key>nativecontrols</key>
-		<string>NativeControls</string>
-		<key>childbrowser</key>
-		<string>ChildBrowser</string>
-		<key>emailcomposer</key>
-		<string>EmailComposer</string>
 		<key>com.phonegap.accelerometer</key>
 		<string>PGAccelerometer</string>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
+		<key>EmailComposer</key>
+		<string>EmailComposer</string>
+		<key>NativeControls</key>
+		<string>NativeControls</string>
 		<key>com.phonegap.camera</key>
 		<string>PGCamera</string>
 		<key>com.phonegap.connection</key>
@@ -40,18 +44,14 @@
 		<string>PGFileTransfer</string>
 		<key>com.phonegap.geolocation</key>
 		<string>PGLocation</string>
+		<key>com.phonegap.notification</key>
+		<string>PGNotification</string>
 		<key>com.phonegap.media</key>
 		<string>PGSound</string>
 		<key>com.phonegap.mediacapture</key>
 		<string>PGCapture</string>
-		<key>com.phonegap.notification</key>
-		<string>PGNotification</string>
 		<key>com.phonegap.splashscreen</key>
 		<string>PGSplashScreen</string>
 	</dict>
-	<key>ShowSplashScreenSpinner</key>
-	<true/>
-	<key>TopActivityIndicator</key>
-	<string>gray</string>
 </dict>
 </plist>

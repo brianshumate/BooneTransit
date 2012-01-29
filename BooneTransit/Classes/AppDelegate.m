@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  BooneTransit
 //
-//  Created by Brian Shumate on 9/16/11.
-//  Copyright openMindShare 2011. All rights reserved.
+//  Created by Brian Shumate on 1/24/12.
+//  Copyright openMindShare 2012. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -29,16 +29,14 @@
  * This is main kick off after the app inits, the views and Settings are setup here. (preferred - iOS4 and up)
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-	
-	NSArray *keyArray = [launchOptions allKeys];
-	if ([launchOptions objectForKey:[keyArray objectAtIndex:0]]!=nil) 
-	{
-		NSURL *url = [launchOptions objectForKey:[keyArray objectAtIndex:0]];
-		self.invokeString = [url absoluteString];
+{    
+    NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+    if (url && [url isKindOfClass:[NSURL class]])
+    {
+        self.invokeString = [url absoluteString];
 		NSLog(@"BooneTransit launchOptions = %@",url);
-	}
-	
+    }    
+		
 	return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -71,6 +69,10 @@
 		NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
 		[theWebView stringByEvaluatingJavaScriptFromString:jsString];
 	}
+	
+	 // Black base color for background matches the native apps
+   	theWebView.backgroundColor = [UIColor blackColor];
+    
 	return [ super webViewDidFinishLoad:theWebView ];
 }
 
@@ -91,7 +93,7 @@
 /**
  * Start Loading Request
  * This is where most of the magic happens... We take the request(s) and process the response.
- * From here we can re direct links and other protocalls to different internal methods.
+ * From here we can redirect links and other protocols to different internal methods.
  */
 - (BOOL)webView:(UIWebView *)theWebView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {

@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  BooneTransit
 //
-//  Created by Brian Shumate on 9/16/11.
-//  Copyright openMindShare 2011. All rights reserved.
+//  Created by Brian Shumate on 1/24/12.
+//  Copyright openMindShare 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

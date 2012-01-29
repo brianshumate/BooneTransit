@@ -4,7 +4,6 @@
 * for BooneTransit app.
 * Copyright 2011 Brian Shumate
 */
-
 //  NativeControls setup
 var nativeControls,
     tabBarItems = { tabs: [
@@ -112,21 +111,6 @@ function holla(msg) {
 
 // "Indiana Jones and The onBodyLoad() of Doom"
 function onBodyLoad() {
-    $('#actweets').live('pageinit', function() {
-      $('#actweets').live('pageshow', function(e) {
-        console.log('Tweets Anywhere loaded (@appalcart)');
-        $('#tweetsadm').jTweetsAnywhere({
-          username: 'appalcart',
-          count: 10,
-          showFollowButton: true,
-          showProfileImages: true,
-          showTwitterBird: false,
-          showGeoLocation: false,
-          showInReplyTo: false
-        });
-        return true;
-      });
-    });
     $("a.link").live("click", function(event) {
       var url = $(this).attr('href');
       if (url.indexOf("http://")>=0) {

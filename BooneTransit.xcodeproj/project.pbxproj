@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7141DC7414DD7B76000F6E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141DC7114DD7B76000F6E60 /* AppDelegate.m */; };
+		7141DC7514DD7B76000F6E60 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141DC7314DD7B76000F6E60 /* MainViewController.m */; };
+		7141DC7714DD7B7C000F6E60 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7141DC7614DD7B7C000F6E60 /* MainViewController.xib */; };
+		717C7ECA14D5878E00652156 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 717C7EC914D5878E00652156 /* icon.png */; };
+		717C7ECD14D5879400652156 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 717C7ECC14D5879400652156 /* icon@2x.png */; };
+		717C7ECF14D587A000652156 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 717C7ECE14D587A000652156 /* Default.png */; };
+		717C7ED114D587A800652156 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 717C7ED014D587A800652156 /* Default@2x.png */; };
 		717E364914D3124700CE9E18 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717E364814D3124700CE9E18 /* MessageUI.framework */; };
 		71E6753714D0D12C00882FE6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 71E6753614D0D12C00882FE6 /* www */; };
 		71E87B5414CF588C008A73E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E87B5314CF588C008A73E3 /* Foundation.framework */; };
@@ -34,7 +41,6 @@
 		71E87B8C14CF588C008A73E3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E87B8B14CF588C008A73E3 /* Default@2x.png */; };
 		71E87B8E14CF588C008A73E3 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71E87B8D14CF588C008A73E3 /* Capture.bundle */; };
 		71E87B9014CF588C008A73E3 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71E87B8F14CF588C008A73E3 /* PhoneGap.plist */; };
-		71E87B9414CF588C008A73E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E87B9314CF588C008A73E3 /* AppDelegate.m */; };
 		71E87BA014CF5977008A73E3 /* EmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E87B9E14CF5977008A73E3 /* EmailComposer.m */; };
 		71E87BA114CF5977008A73E3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 71E87B9F14CF5977008A73E3 /* readme.md */; };
 		71E87BAA14CF597D008A73E3 /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71E87BA314CF597D008A73E3 /* ChildBrowser.bundle */; };
@@ -46,6 +52,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7141DC7014DD7B76000F6E60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		7141DC7114DD7B76000F6E60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		7141DC7214DD7B76000F6E60 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		7141DC7314DD7B76000F6E60 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
+		7141DC7614DD7B7C000F6E60 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
+		717C7EC914D5878E00652156 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		717C7ECC14D5879400652156 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		717C7ECE14D587A000652156 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		717C7ED014D587A800652156 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		717E364814D3124700CE9E18 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		71E6753614D0D12C00882FE6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		71E87B4F14CF588C008A73E3 /* BooneTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooneTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,8 +91,6 @@
 		71E87B8B14CF588C008A73E3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		71E87B8D14CF588C008A73E3 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		71E87B8F14CF588C008A73E3 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		71E87B9214CF588C008A73E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		71E87B9314CF588C008A73E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		71E87B9614CF588C008A73E3 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		71E87B9D14CF5977008A73E3 /* EmailComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailComposer.h; sourceTree = "<group>"; };
 		71E87B9E14CF5977008A73E3 /* EmailComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailComposer.m; sourceTree = "<group>"; };
@@ -129,6 +142,10 @@
 		71E87B4114CF588B008A73E3 = {
 			isa = PBXGroup;
 			children = (
+				717C7ED014D587A800652156 /* Default@2x.png */,
+				717C7ECE14D587A000652156 /* Default.png */,
+				717C7ECC14D5879400652156 /* icon@2x.png */,
+				717C7EC914D5878E00652156 /* icon.png */,
 				717E364814D3124700CE9E18 /* MessageUI.framework */,
 				71E6753614D0D12C00882FE6 /* www */,
 				71E87B6D14CF588C008A73E3 /* BooneTransit */,
@@ -180,6 +197,7 @@
 		71E87B6E14CF588C008A73E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7141DC7614DD7B7C000F6E60 /* MainViewController.xib */,
 				71E87B6F14CF588C008A73E3 /* BooneTransit-Info.plist */,
 				71E87B7014CF588C008A73E3 /* InfoPlist.strings */,
 				71E87B7314CF588C008A73E3 /* main.m */,
@@ -240,8 +258,10 @@
 		71E87B9114CF588C008A73E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				71E87B9214CF588C008A73E3 /* AppDelegate.h */,
-				71E87B9314CF588C008A73E3 /* AppDelegate.m */,
+				7141DC7014DD7B76000F6E60 /* AppDelegate.h */,
+				7141DC7114DD7B76000F6E60 /* AppDelegate.m */,
+				7141DC7214DD7B76000F6E60 /* MainViewController.h */,
+				7141DC7314DD7B76000F6E60 /* MainViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -359,6 +379,11 @@
 				71E87BAD14CF597D008A73E3 /* ChildBrowserViewController.xib in Resources */,
 				71E87BAE14CF597D008A73E3 /* README.txt in Resources */,
 				71E6753714D0D12C00882FE6 /* www in Resources */,
+				717C7ECA14D5878E00652156 /* icon.png in Resources */,
+				717C7ECD14D5879400652156 /* icon@2x.png in Resources */,
+				717C7ECF14D587A000652156 /* Default.png in Resources */,
+				717C7ED114D587A800652156 /* Default@2x.png in Resources */,
+				7141DC7714DD7B7C000F6E60 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,11 +411,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71E87B7414CF588C008A73E3 /* main.m in Sources */,
-				71E87B9414CF588C008A73E3 /* AppDelegate.m in Sources */,
 				71E87BA014CF5977008A73E3 /* EmailComposer.m in Sources */,
 				71E87BAB14CF597D008A73E3 /* ChildBrowserCommand.m in Sources */,
 				71E87BAC14CF597D008A73E3 /* ChildBrowserViewController.m in Sources */,
 				71E87BB214CF5984008A73E3 /* NativeControls.m in Sources */,
+				7141DC7414DD7B76000F6E60 /* AppDelegate.m in Sources */,
+				7141DC7514DD7B76000F6E60 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

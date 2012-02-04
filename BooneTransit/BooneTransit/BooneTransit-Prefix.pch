@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'BooneTransit' target in the 'BooneTransit' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif

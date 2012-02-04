@@ -22,6 +22,8 @@
 	<array/>
 	<key>Plugins</key>
 	<dict>
+		<key>com.phonegap.battery</key>
+		<string>PGBattery</string>
 		<key>com.phonegap.accelerometer</key>
 		<string>PGAccelerometer</string>
 		<key>ChildBrowserCommand</key>

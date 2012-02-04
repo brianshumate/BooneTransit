@@ -39,3 +39,7 @@
     font-weight: 400;
     color: #3d3d3d;
 }
+.ui-li-has-count2, .ui-li-static.ui-li-has-count2 { padding-right: 75px; }
+.ui-li-has-count2 .ui-li-count2 { position: absolute; font-size: 11px; font-weight: bold; padding: .2em .5em; top: 50%; margin-top: -.9em; right: 76px; }
+.ui-li-count2, .ui-li-static .ui-li-count2 { right: 20px; }
+.ui-li-has-alt .ui-li-count2 { right: 110px; }
